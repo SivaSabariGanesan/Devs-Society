@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devs Society Portal – Final Ideation Draft</title>
+  <style>
+    :root {
+      --primary: #4b0082;
+      --secondary: #2f2f8f;
+      --bg: #f9f9ff;
+      --text: #222;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--primary);
+      font-size: 26px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+    }
+
+    h2 {
+      color: var(--secondary);
+      font-size: 20px;
+      margin-top: 25px;
+      border-left: 5px solid var(--secondary);
+      padding-left: 10px;
+    }
+
+    ul {
+      margin-left: 20px;
+      padding-left: 10px;
+    }
+
+    ul li {
+      margin-bottom: 6px;
+      line-height: 1.6;
+    }
+
+    p {
+      margin-top: 8px;
+      line-height: 1.7;
+    }
+
+    .footer {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        margin: 10px;
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Devs Society Portal – Final Ideation Draft</h1>
+
+    <h2>1. Vision & Purpose</h2>
+    <p>A centralized platform to manage Devs Society operations across multiple colleges.</p>
+    <ul>
+      <li>OTP-based student registration</li>
+      <li>Membership dashboard with digital ID card</li>
+      <li>Event participation (free/paid) and QR-based check-ins</li>
+      <li>Core Admin dashboard to manage events, users, forms, colleges, and roles</li>
+    </ul>
+
+    <h2>2. Portal Structure</h2>
+    <p><strong>Core Admin Portal:</strong></p>
+    <ul>
+      <li>Predefined login (email + password)</li>
+      <li>Add/manage Core/Admin users</li>
+      <li>Manage events, colleges, batches, and roles</li>
+      <li>QR scan for check-in</li>
+    </ul>
+    <p><strong>Student Portal:</strong></p>
+    <ul>
+      <li>OTP-based registration</li>
+      <li>Register for events, get QR & ID card</li>
+      <li>Manage My Events (view, countdown)</li>
+      <li>Online payments for paid events</li>
+    </ul>
+
+    <h2>3. Roles & Access</h2>
+    <ul>
+      <li><strong>Core/Admin:</strong> Full access, only added manually</li>
+      <li><strong>Student:</strong> Can register via OTP, limited access</li>
+    </ul>
+
+    <h2>4. Authentication & Registration</h2>
+    <ul>
+      <li>Name, email, phone number</li>
+      <li>Select college (REC / RIT), batch (e.g., Swayam tenure), role</li>
+      <li>OTP verification (email)</li>
+      <li>Password setup after OTP</li>
+      <li>Auto-generated ID (e.g., DEVS-2025-0001)</li>
+      <li>QR code generated</li>
+    </ul>
+
+    <h2>5. Student Dashboard (Post Login)</h2>
+    <ul>
+      <li><strong>Dashboard:</strong> Greeting, stats</li>
+      <li><strong>My Events:</strong> Registered events, QR, countdown</li>
+      <li><strong>My Card:</strong> Profile info + QR</li>
+      <li><strong>Logout</strong></li>
+    </ul>
+
+    <h2>6. Event Management (Core/Admin)</h2>
+    <ul>
+      <li>Add/edit/delete events</li>
+      <li>Free/paid events (Cashfree/Razorpay)</li>
+      <li>Custom registration forms</li>
+      <li>View and download participant data</li>
+    </ul>
+
+    <h2>7. QR-Based Attendance</h2>
+    <ul>
+      <li>QR generated on registration</li>
+      <li>Scan by Core/Admin to mark attendance</li>
+      <li>Timestamp & duplicate prevention</li>
+    </ul>
+
+    <h2>8. Email Notifications</h2>
+    <ul>
+      <li>OTP email on signup</li>
+      <li>Confirmation with QR</li>
+      <li>Auto-reminder 1 day before event</li>
+    </ul>
+
+    <h2>9. Admin Panel Features</h2>
+    <ul>
+      <li>Add colleges, batches, roles</li>
+      <li>Manage Core/Admin accounts</li>
+      <li>Event control, stats, QR scanner</li>
+    </ul>
+
+    <h2>10. Tech Stack</h2>
+    <ul>
+      <li>Frontend: React.js + Tailwind CSS</li>
+      <li>Backend: Node.js + Express.js</li>
+      <li>Database: MongoDB</li>
+      <li>Auth: JWT, bcrypt, Nodemailer (OTP)</li>
+      <li>Payments: Razorpay, Cashfree</li>
+      <li>QR: qrcode, react-qr-reader</li>
+      <li>Reminders: node-cron</li>
+    </ul>
+
+    <h2>11. Advanced Dashboard Features</h2>
+    <ul>
+      <li>Filter by past/upcoming events</li>
+      <li>Countdown for events</li>
+      <li>QR scanner shortcut (Core/Admin only)</li>
+    </ul>
+
+    <h2>12. Suggested Page Structure</h2>
+    <ul>
+      <li>Landing Page: About, Register, Login</li>
+      <li>Student Dashboard: Dashboard, My Events, My Card, Logout</li>
+      <li>Admin Panel: Events, Users, QR Scanner, Forms, Stats</li>
+      <li>QR Page: Optimized for mobile scanning</li>
+    </ul>
+
+    <div class="footer">
+      Devs Society Portal · Final Responsive Draft · July 2025
+    </div>
+  </div>
+</body>
+</html>
